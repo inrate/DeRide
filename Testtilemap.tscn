@@ -1,17 +1,67 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://art/Platformer - desert/Tileset/tileMain2.png" type="Texture" id=1]
+[ext_resource path="res://art/Platformer - desert/Tileset/platvariation1.png" type="Texture" id=2]
+[ext_resource path="res://art/Platformer - desert/Tileset/platvariation2.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 13.9924, 13.5827 )
+extents = Vector2( 8, 8 )
 
 [node name="Tiles" type="Node2D"]
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 425.938, 705.536 )
-scale = Vector2( 7.26897, 7.03245 )
+[node name="general_jord" type="Sprite" parent="."]
+position = Vector2( 424, 776 )
+scale = Vector2( 3.161, 3.10694 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
+[node name="StaticBody2D" type="StaticBody2D" parent="general_jord"]
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
-visible = false
-position = Vector2( -0.121681, -1.52588e-05 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="general_jord/StaticBody2D"]
+position = Vector2( -0.0752716, 0.155685 )
 shape = SubResource( 1 )
+
+[node name="jord_hjørne_v" type="Sprite" parent="."]
+position = Vector2( 488, 776 )
+scale = Vector2( 3.10275, 3.18299 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="jord_hjørne_v"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jord_hjørne_v/StaticBody2D"]
+position = Vector2( -1.52588e-05, 0.622284 )
+shape = SubResource( 1 )
+
+[node name="jord_hjørne_v2" type="Sprite" parent="."]
+position = Vector2( 552, 776 )
+scale = Vector2( 3.10275, 3.18299 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="jord_hjørne_v2"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jord_hjørne_v2/StaticBody2D"]
+position = Vector2( -1.52588e-05, 0.622284 )
+shape = SubResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="Node2D3" type="Node2D" parent="."]
