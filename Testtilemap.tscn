@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 13.9924, 13.5827 )
+
+[node name="Tiles" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 425.938, 705.536 )
+scale = Vector2( 7.26897, 7.03245 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
+visible = false
+position = Vector2( -0.121681, -1.52588e-05 )
+shape = SubResource( 1 )
