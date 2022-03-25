@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://art/Platformer - desert/props/rocks2.png" type="Texture" id=1]
+[ext_resource path="res://art/Platformer - desert/props/tree03.png" type="Texture" id=2]
+[ext_resource path="res://art/Platformer - desert/props/rocks5.png" type="Texture" id=3]
+[ext_resource path="res://art/Platformer - desert/props/rocks1.png" type="Texture" id=4]
+[ext_resource path="res://art/Platformer - desert/props/tree02.png" type="Texture" id=5]
+[ext_resource path="res://art/Platformer - desert/props/tree04.png" type="Texture" id=6]
+
+[node name="Background_props_outside" type="Node2D"]
+
+[node name="Big_rock" type="Sprite" parent="."]
+position = Vector2( 64, 64 )
+scale = Vector2( 4.375, 4.375 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Less_bigger_rock" type="Sprite" parent="."]
+position = Vector2( 168, 64 )
+scale = Vector2( 4.375, 4.375 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Less_bigger_rock2" type="Sprite" parent="."]
+position = Vector2( 264, 64 )
+scale = Vector2( 4.375, 4.375 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree_not_dead" type="Sprite" parent="."]
+position = Vector2( 203, 328 )
+scale = Vector2( 4.375, 4.375 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree_but_mush_dead" type="Sprite" parent="."]
+position = Vector2( 544, 328 )
+scale = Vector2( 4.375, 4.375 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree_bush_dead" type="Sprite" parent="."]
+position = Vector2( 792, 328 )
+scale = Vector2( 4.375, 4.375 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
