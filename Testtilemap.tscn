@@ -59,9 +59,3 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="jord_hjørne_v2/StaticBody2D"]
 position = Vector2( -1.52588e-05, 0.622284 )
 shape = SubResource( 1 )
-
-[node name="Node2D" type="Node2D" parent="."]
-
-[node name="Node2D2" type="Node2D" parent="."]
-
-[node name="Node2D3" type="Node2D" parent="."]
