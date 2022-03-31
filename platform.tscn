@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Props_outside.tres" type="TileSet" id=1]
+[ext_resource path="res://Tiles_platform_jord.tres" type="TileSet" id=2]
+[ext_resource path="res://platform.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 832, 32 )
+
+[node name="platform" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Debug_Line" type="Node2D" parent="."]
+
+[node name="Platform_Base" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Platform_Base"]
+scale = Vector2( 4, 4 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 1048578, 1, 0, 1048579, 0, 0, 1048580, 0, 0, 1048581, 0, 0, 1048582, 0, 0, 1048583, 0, 0, 1048584, 0, 0, 1048585, 0, 0, 1048586, 0, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1048599, 0, 0, 1048600, 0, 0, 1048601, 0, 0, 1048602, 0, 0, 1048603, 2, 0 )
+
+[node name="TileMap2" type="TileMap" parent="Platform_Base/TileMap"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 720900, 536870915, 0, 786454, 536870916, 0, 851975, 536870917, 0, 851986, 536870917, 0, 983045, 536870913, 0, 983046, 536870914, 0, 983051, 536870914, 0, 983052, 536870912, 0, 983062, 536870914, 0 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Platform_Base"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform_Base/KinematicBody2D"]
+position = Vector2( 960, 1056 )
+shape = SubResource( 1 )
+
+[node name="Tween" type="Tween" parent="Platform_Base"]
