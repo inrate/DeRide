@@ -13,11 +13,10 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 1048578, 1, 0, 1048579, 0, 0, 1048580, 0, 0, 1048581, 0, 0, 1048582, 0, 0, 1048583, 0, 0, 1048584, 0, 0, 1048585, 0, 0, 1048586, 0, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1048599, 0, 0, 1048600, 0, 0, 1048601, 0, 0, 1048602, 0, 0, 1048603, 2, 0 )
 
-[node name="background" parent="." instance=ExtResource( 2 )]
-
-[node name="TileMap2" type="TileMap" parent="."]
-scale = Vector2( 4, 4 )
+[node name="TileMap2" type="TileMap" parent="TileMap"]
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 720900, 536870915, 0, 786454, 536870916, 0, 851975, 536870917, 0, 851986, 536870917, 0, 983045, 536870913, 0, 983046, 536870914, 0, 983051, 536870914, 0, 983052, 536870912, 0, 983062, 536870914, 0 )
+
+[node name="background" parent="." instance=ExtResource( 2 )]
