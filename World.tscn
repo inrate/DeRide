@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Tiles_platform_jord.tres" type="TileSet" id=1]
 [ext_resource path="res://background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Props_outside.tres" type="TileSet" id=3]
+[ext_resource path="res://Sand_Dust.tscn" type="PackedScene" id=4]
 
 [node name="World" type="Node2D"]
 
@@ -20,3 +21,5 @@ format = 1
 tile_data = PoolIntArray( 720900, 536870915, 0, 786454, 536870916, 0, 851975, 536870917, 0, 851986, 536870917, 0, 983045, 536870913, 0, 983046, 536870914, 0, 983051, 536870914, 0, 983052, 536870912, 0, 983062, 536870914, 0 )
 
 [node name="background" parent="." instance=ExtResource( 2 )]
+
+[node name="Sand_Dust" parent="." instance=ExtResource( 4 )]

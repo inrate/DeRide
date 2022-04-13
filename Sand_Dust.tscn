@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="Curve" id=2]
+min_value = -360.0
+max_value = 360.0
+_data = [ Vector2( 0, 225 ), 0.0, 458.805, 0, 0, Vector2( 0.98913, 225 ), 715.091, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=3]
+curve = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 2
+emission_box_extents = Vector3( 1, 540, 1 )
+flag_disable_z = true
+gravity = Vector3( -100, 10, 0 )
+initial_velocity = 186.27
+initial_velocity_random = 1.0
+angular_velocity_curve = SubResource( 3 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 3.0
+scale_random = 1.0
+color = Color( 0.698039, 0.584314, 0.337255, 1 )
+anim_offset_random = 0.85
+
+[node name="Sand_Dust" type="Node2D"]
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 2520, 536 )
+amount = 2000
+lifetime = 10.0
+visibility_rect = Rect2( -1000, -120, 200, 200 )
+process_material = SubResource( 1 )
