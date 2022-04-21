@@ -14,6 +14,7 @@
 motion_offset = Vector2( 111, 0 )
 motion_mirroring = Vector2( 1920, 0 )
 script = ExtResource( 4 )
+Sand_Background_Seed = -50.0
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 985, 537.5 )
@@ -23,6 +24,7 @@ texture = ExtResource( 2 )
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2( 1920, 0 )
 script = ExtResource( 5 )
+Sand_Mouinten_Seed = -100.0
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2( 977, 526 )
