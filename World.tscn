@@ -21,5 +21,6 @@ format = 1
 tile_data = PoolIntArray( 720900, 536870915, 0, 786454, 536870916, 0, 851975, 536870917, 0, 851986, 536870917, 0, 983045, 536870913, 0, 983046, 536870914, 0, 983051, 536870914, 0, 983052, 536870912, 0, 983062, 536870914, 0 )
 
 [node name="background" parent="." instance=ExtResource( 2 )]
+position = Vector2( 16, 0 )
 
 [node name="Sand_Dust" parent="." instance=ExtResource( 4 )]
