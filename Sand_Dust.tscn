@@ -28,6 +28,7 @@ anim_offset_random = 0.85
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( 2520, 536 )
 amount = 2000
-lifetime = 10.0
+lifetime = 9.0
+speed_scale = 3.0
 visibility_rect = Rect2( -1000, -120, 200, 200 )
 process_material = SubResource( 1 )
