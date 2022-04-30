@@ -28,6 +28,6 @@ position = Vector2( 16, 0 )
 [node name="Sand_Dust" parent="." instance=ExtResource( 4 )]
 
 [node name="Player_schild" parent="." instance=ExtResource( 5 )]
-speed = 600
+speed = 400
 jump = -1000
 gravity = 40

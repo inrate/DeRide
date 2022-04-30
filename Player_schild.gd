@@ -13,8 +13,12 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("ui_right"):
 		motion.x = speed
+		$Idle_player_schild.flip_h = true
+		$AnimationPlayer.play("Walk_player_schild")
 	elif Input.is_action_pressed("ui_left"):
 		motion.x = -speed
+		$Idle_player_schild.flip_h = false
+		$AnimationPlayer.play("Walk_player_schild")
 	else:
 		motion.x = 0
 		$AnimationPlayer.play("Idle_player_schild")
