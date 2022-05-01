@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+#dette er hvis 
+var hit_dead = false
+
 export var speed = 500
 export var jump = -350
 export var gravity = 20
@@ -8,7 +11,7 @@ const Up = Vector2.UP
 var motion = Vector2()
 
 func _physics_process(delta):
-	#
+	
 	motion.y += gravity
 	
 	if Input.is_action_pressed("ui_right"):
@@ -36,3 +39,8 @@ func _physics_process(delta):
 	
 	motion = move_and_slide(motion, Up)
 
+func dead():
+	hit_dead = true
+	motion = Vector2.ZERO
+	$CollisionShape2D.disabled
+	$AnimationPlayer.play("Death_player_schild")

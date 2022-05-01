@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Player_schild_code/Player_schild.gd" type="Script" id=1]
 [ext_resource path="res://Player_schild_code/Arm_player_schild.gd" type="Script" id=2]
@@ -7,9 +7,26 @@
 [ext_resource path="res://art/Player_Schild_art/Mummy arm with skjold.png" type="Texture" id=5]
 [ext_resource path="res://Player_schild_code/Idle_player_schild.gd" type="Script" id=6]
 [ext_resource path="res://Player_schild_code/Walk_player_schild.gd" type="Script" id=7]
+[ext_resource path="res://art/Player_Schild_art/Mummy_death v2.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36, 80 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "Death_player_schild"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Death_player_schild:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "Idle_player_schild"
@@ -57,27 +74,41 @@ position = Vector2( 52, 40 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Death_player_schild = SubResource( 5 )
 anims/Idle_player_schild = SubResource( 2 )
 anims/Walk_player_schild = SubResource( 3 )
 
 [node name="Idle_player_schild" type="Sprite" parent="."]
+visible = false
 position = Vector2( 56, 40 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 3 )
 hframes = 4
+frame = 2
 region_enabled = true
 region_rect = Rect2( 11, 15, 192, 33 )
 script = ExtResource( 6 )
 
 [node name="Walk_player_schild" type="Sprite" parent="."]
-position = Vector2( 50.6143, 33.9063 )
-scale = Vector2( 5.09107, 5.09107 )
+visible = false
+position = Vector2( 56, 40 )
+scale = Vector2( 5, 5 )
 texture = ExtResource( 4 )
 hframes = 6
 frame = 1
 region_enabled = true
 region_rect = Rect2( 10, 13, 288, 35 )
 script = ExtResource( 7 )
+
+[node name="Death_player_schild" type="Sprite" parent="."]
+visible = false
+position = Vector2( 56, 0 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 8 )
+hframes = 6
+frame = 5
+region_enabled = true
+region_rect = Rect2( 10, 0, 290, 49 )
 
 [node name="Arm_schild" type="Sprite" parent="."]
 position = Vector2( 72, 8 )
