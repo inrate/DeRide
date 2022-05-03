@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Background_code/Tiles_platform_jord.tres" type="TileSet" id=1]
 [ext_resource path="res://Background_code/background.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Background_code/Sand_Dust.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player_schild_code/Player_schild.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemy_code/Enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Player_Gunner_code/Player_gunner.tscn" type="PackedScene" id=7]
 
 [node name="World" type="Node2D"]
 
@@ -27,6 +28,9 @@ tile_data = PoolIntArray( 720900, 536870915, 0, 786454, 536870916, 0, 851975, 53
 position = Vector2( 16, 0 )
 
 [node name="Sand_Dust" parent="." instance=ExtResource( 4 )]
+
+[node name="Player_gunner" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1300, 936 )
 
 [node name="Player_schild" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1066, 900 )
