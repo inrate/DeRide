@@ -10,7 +10,7 @@ const Up = Vector2.UP
 
 var motion = Vector2()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	motion.y += gravity
 	
@@ -42,5 +42,5 @@ func _physics_process(delta):
 func dead():
 	hit_dead = true
 	motion = Vector2.ZERO
-	$CollisionShape2D.disabled
+	CollisionShape2D.disabled
 	$AnimationPlayer.play("Death_player_schild")

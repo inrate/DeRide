@@ -1,18 +1,39 @@
 extends KinematicBody2D
-var x= 1
-var gravaty = sin(x)
 
-var one = 0
+onready var BULLET_SCENE = preload("res://Bullet for enemy/Bullet_enemy.tscn")
+
+var player = null
 var move = Vector2.ZERO
+var speed = 1
 
-func _physics_process(delta):
-	one += 1
+func _physics_process(_delta):
+	move = Vector2.ZERO
 	
-	if gravaty != 500:
-		pass
+	if player != null:
+		move = position.direction_to(player.position) * speed
 	else:
-		move.y=gravaty + one
+		move = Vector2.ZERO
+		
+	move = move.normalized()
+	move = move_and_collide(move)
+
+func _on_Area2D_body_entered(body):
+	if body !=self:
+		player = body
+
+
+func _on_Area2D_body_exited(_body):
+	player = null
 	
-	print(move.y)
+func fire():
+	var bullet = BULLET_SCENE.instance()
+	bullet.position = get_global_position()
+	bullet.player = player
+	get_parent().add_child(bullet)
+	$Timer.set_wait_time(1)
+
+
+func _on_Timer_timeout():
+	if player != null:
+		fire()
 	
-	move = move_and_slide(move)
