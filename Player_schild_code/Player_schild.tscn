@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player_schild_code/Player_schild.gd" type="Script" id=1]
 [ext_resource path="res://Player_schild_code/Arm_player_schild.gd" type="Script" id=2]
@@ -61,10 +61,6 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5 ]
 }
 
-[sub_resource type="CapsuleShape2D" id=4]
-radius = 4.5572
-height = 6.68224
-
 [node name="Player_schild" type="KinematicBody2D"]
 position = Vector2( 680, 640 )
 script = ExtResource( 1 )
@@ -116,12 +112,3 @@ scale = Vector2( 4.5, 4.5 )
 texture = ExtResource( 5 )
 offset = Vector2( -4, 7 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Arm_schild"]
-position = Vector2( -5.33333, 8.88889 )
-rotation = -0.349066
-shape = SubResource( 4 )
-one_way_collision_margin = 0.0

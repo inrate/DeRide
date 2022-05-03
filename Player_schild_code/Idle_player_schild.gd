@@ -1,7 +1,7 @@
 extends Sprite
 
 
-func _process(delta):
+func _process(_delta):
 	
 	self.visible = true
 	if Input.is_action_pressed("ui_right"):
