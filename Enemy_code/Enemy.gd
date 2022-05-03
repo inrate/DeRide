@@ -20,6 +20,11 @@ func _physics_process(_delta):
 func _on_Area2D_body_entered(body):
 	if body !=self:
 		player = body
+	
+#	if fire():
+#		pass
+#	else:
+	$AnimationPlayer.play("Flight_enemy")
 
 
 func _on_Area2D_body_exited(_body):
