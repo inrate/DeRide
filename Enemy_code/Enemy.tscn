@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://art/Enemy/Flight.png" type="Texture" id=1]
+[ext_resource path="res://Enemy_code/Enemy.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 48.0
@@ -22,13 +23,16 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
 }
 
+[sub_resource type="CircleShape2D" id=3]
+radius = 576.5
+
 [node name="Enemy" type="KinematicBody2D"]
+script = ExtResource( 2 )
 
 [node name="Flight_enemy" type="Sprite" parent="."]
-scale = Vector2( 5.09574, 5.09574 )
+scale = Vector2( 5, 5 )
 texture = ExtResource( 1 )
 hframes = 8
-frame = 7
 region_enabled = true
 region_rect = Rect2( 7, 53, 1199, 47 )
 
@@ -39,3 +43,15 @@ shape = SubResource( 2 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Flight_enemy")
 anims/Flight_enemy = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
