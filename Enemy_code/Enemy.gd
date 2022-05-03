@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-onready var BULLET_SCENE = preload("res://Bullet for enemy/Bullet_enemy.tscn")
+onready var BULLET_SCENE = preload("res://bullet.tscn")
 
 var player = null
 var move = Vector2.ZERO
