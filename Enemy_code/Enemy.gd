@@ -29,10 +29,12 @@ func _on_Area2D_body_exited(_body):
 	
 func fire():
 	var bullet = BULLET_SCENE.instance()
+#	$AnimationPlayer.play("Attack_enemy")
 	bullet.position = get_global_position()
 	bullet.player = player
 	get_parent().add_child(bullet)
 	$Timer.set_wait_time(1)
+
 
 
 func _on_Timer_timeout():

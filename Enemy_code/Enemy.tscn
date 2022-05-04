@@ -1,7 +1,24 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://art/Enemy/Flight.png" type="Texture" id=1]
 [ext_resource path="res://Enemy_code/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://art/Enemy/Attack.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=4]
+resource_name = "Attack_enemy"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Attack:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
 
 [sub_resource type="Animation" id=1]
 resource_name = "Flight_enemy"
@@ -38,8 +55,18 @@ hframes = 8
 region_enabled = true
 region_rect = Rect2( 7, 53, 1199, 47 )
 
+[node name="Attack" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 5, 5 )
+texture = ExtResource( 3 )
+hframes = 8
+frame = 7
+region_enabled = true
+region_rect = Rect2( 7, 53, 1197, 47 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Flight_enemy")
+anims/Attack_enemy = SubResource( 4 )
 anims/Flight_enemy = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

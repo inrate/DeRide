@@ -61,7 +61,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CapsuleShape2D" id=6]
-radius = 4.22221
+radius = 4.08016
 height = 6.26929
 
 [node name="Player_schild" type="KinematicBody2D"]
@@ -103,6 +103,7 @@ position = Vector2( 56, 0 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 8 )
 hframes = 6
+frame = 5
 region_enabled = true
 region_rect = Rect2( 10, 0, 290, 49 )
 
