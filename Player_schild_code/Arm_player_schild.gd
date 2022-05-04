@@ -1,5 +1,6 @@
 extends Sprite
 
+onready var enemy_bullet = preload("res://Bullet_enemy/bullet.tscn")
 
 var Ratation_speed = PI*2
 
@@ -22,5 +23,3 @@ func _process(delta):
 		offset.x = -4
 		offset.y = 7
 
-
-	

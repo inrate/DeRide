@@ -62,7 +62,7 @@ tracks/0/keys = {
 
 [sub_resource type="CapsuleShape2D" id=6]
 radius = 4.22221
-height = 8.0
+height = 6.26929
 
 [node name="Player_schild" type="KinematicBody2D"]
 position = Vector2( 680, 640 )
@@ -113,9 +113,9 @@ texture = ExtResource( 5 )
 offset = Vector2( -4, 7 )
 script = ExtResource( 2 )
 
-[node name="Area2D" type="Area2D" parent="Arm_schild"]
+[node name="schild" type="Area2D" parent="Arm_schild"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Arm_schild/Area2D"]
+[node name="schild" type="CollisionShape2D" parent="Arm_schild/schild"]
 position = Vector2( -5.77779, 8.44444 )
 rotation = -0.436332
 shape = SubResource( 6 )

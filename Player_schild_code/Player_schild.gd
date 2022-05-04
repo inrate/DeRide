@@ -44,3 +44,6 @@ func dead():
 	motion = Vector2.ZERO
 	CollisionShape2D.disabled
 	$AnimationPlayer.play("Death_player_schild")
+
+
+

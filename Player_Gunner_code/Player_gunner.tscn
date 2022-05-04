@@ -110,9 +110,16 @@ script = ExtResource( 8 )
 [node name="Position2D_left" type="Position2D" parent="Gun_player_gunner"]
 position = Vector2( -12.2222, 12.2222 )
 
+[node name="Position2D_shoot_at_l" type="Position2D" parent="Gun_player_gunner/Position2D_left"]
+position = Vector2( -0.777802, 0.777802 )
+
 [node name="Position2D_right" type="Position2D" parent="Gun_player_gunner"]
 position = Vector2( 12, 12 )
 
+[node name="Position2D_shoot_at_r" type="Position2D" parent="Gun_player_gunner/Position2D_right"]
+position = Vector2( 1, 1 )
+
 [node name="Area2D" type="Area2D" parent="Gun_player_gunner"]
+position = Vector2( 0.222229, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gun_player_gunner/Area2D"]

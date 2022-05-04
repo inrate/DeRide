@@ -15,3 +15,12 @@ func _physics_process(delta):
 	move = move.move_toward(look_vec, delta)
 	move = move.normalized() * speed
 	position += move
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()
+
+
+func _on_bullet_area_entered(area):
+		if area.get_name() == "schild":
+			queue_free()
