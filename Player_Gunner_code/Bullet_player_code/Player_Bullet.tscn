@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://art/Player_Gunner_art/Mummy bullet v2.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 7.0
+height = 12.0
+
+[node name="Player_Bullet" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -4.76837e-07, 0 )
+scale = Vector2( 3.16667, 2.5 )
+texture = ExtResource( 1 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TilesForIndoors.png-66e48d604135851a4a6a6c76978aebfe.stex"
+path="res://.import/Mummy bullet v2.png-7c60804910c5c0569111242328c3d5b8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/TilesForIndoors.png"
-dest_files=[ "res://.import/TilesForIndoors.png-66e48d604135851a4a6a6c76978aebfe.stex" ]
+source_file="res://art/Player_Gunner_art/Mummy bullet v2.png"
+dest_files=[ "res://.import/Mummy bullet v2.png-7c60804910c5c0569111242328c3d5b8.stex" ]
 
 [params]
 

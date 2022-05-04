@@ -33,7 +33,7 @@ position = Vector2( 16, 0 )
 position = Vector2( 1300, 936 )
 
 [node name="Player_schild" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1066, 900 )
+position = Vector2( 1368, 904 )
 speed = 400
 jump = -1000
 gravity = 40
