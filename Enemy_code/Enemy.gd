@@ -18,8 +18,11 @@ func _physics_process(_delta):
 	move = move_and_collide(move)
 
 func _on_Area2D_body_entered(body):
-	if body !=self:
-		player = body
+	if body.get_name() =="Enemy":
+		player = null
+	else:
+		if body !=self:
+			player = body
 	
 	$AnimationPlayer.play("Flight_enemy")
 
